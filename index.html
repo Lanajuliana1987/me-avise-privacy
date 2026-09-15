@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Política de Privacidade do aplicativo Me Avise">
+  <title>Política de Privacidade — Me Avise</title>
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    body {
+      margin: 0;
+      background: #111216;
+      color: #f2f2f5;
+    }
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+    h1, h2 { line-height: 1.25; }
+    h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+    h2 { margin-top: 2rem; }
+    .muted { color: #b8b8c2; }
+    a { color: #c8a9ff; }
+    code {
+      background: #202128;
+      padding: 0.1rem 0.3rem;
+      border-radius: 4px;
+    }
+    section {
+      border-top: 1px solid #2e3038;
+      padding-top: 0.5rem;
+    }
+    @media (prefers-color-scheme: light) {
+      body { background: #ffffff; color: #17171b; }
+      .muted { color: #5f6068; }
+      a { color: #5b2ca0; }
+      code { background: #f1f1f5; }
+      section { border-top-color: #e2e2e8; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Política de Privacidade — Me Avise</h1>
+  <p class="muted"><strong>Última atualização:</strong> 15 de setembro de 2026</p>
+
+  <p>Esta Política de Privacidade descreve de forma clara, transparente e objetiva como o aplicativo <strong>Me Avise</strong> trata as informações e os dados em seu dispositivo.</p>
+
+  <section>
+    <h2>1. Princípio Fundamental: Operação Local e Sem Internet</h2>
+    <ul>
+      <li><strong>Sem Permissão de Internet:</strong> o aplicativo não solicita, não declara e não possui a permissão <code>android.permission.INTERNET</code> em seu manifesto. O Me Avise não implementa comunicações de rede próprias.</li>
+      <li><strong>Armazenamento Local:</strong> todos os lembretes, rotinas, compromissos e preferências de configuração do usuário são gravados e processados localmente no próprio aparelho.</li>
+      <li><strong>Sem Servidores Próprios:</strong> nenhum dado cadastrado é enviado para servidores próprios ou de terceiros sob controle da desenvolvedora.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. Ausência de Publicidade, Rastreamento e Contas</h2>
+    <ul>
+      <li><strong>Sem Anúncios:</strong> o aplicativo não exibe publicidade comercial e não integra SDKs de redes de anúncios.</li>
+      <li><strong>Sem Analytics ou Telemetria:</strong> o aplicativo não utiliza ferramentas de análise de uso, telemetria, crash reporting externo ou rastreamento de comportamento.</li>
+      <li><strong>Sem Rastreamento Entre Aplicativos:</strong> nenhum mecanismo de perfilamento ou identificador de publicidade é coletado ou monitorado.</li>
+      <li><strong>Sem Contas de Usuário:</strong> o aplicativo não exige criação de conta, login ou senha. O usuário pode registrar localmente informações de sua preferência no próprio aparelho.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. Uso do Microfone e Reconhecimento de Voz</h2>
+    <p>O aplicativo oferece criação de itens por comando de voz.</p>
+    <ul>
+      <li><strong>Uso Exclusivo sob Demanda:</strong> a permissão <code>android.permission.RECORD_AUDIO</code> é utilizada somente quando o usuário toca explicitamente no botão de microfone. O aplicativo não realiza escuta passiva em segundo plano.</li>
+      <li><strong>Prioridade para Reconhecimento no Dispositivo:</strong> sempre que suportado pelo dispositivo Android, o aplicativo prioriza o reconhecimento local no próprio aparelho.</li>
+      <li><strong>Consentimento para Serviço de Reconhecimento do Sistema:</strong> quando o reconhecimento no dispositivo não estiver disponível, o aplicativo somente poderá utilizar o mecanismo padrão de reconhecimento de voz do sistema após consentimento prévio e explícito do usuário.</li>
+      <li><strong>Processamento pelo Provedor do Sistema:</strong> caso o usuário consinta, o áudio capturado poderá ser processado pelo provedor do serviço de voz do Android ou pelo fabricante do aparelho, conforme a política de privacidade desse provedor. O Me Avise não cria nem armazena arquivos de áudio e não possui acesso aos servidores do provedor.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. Síntese de Voz (Text-to-Speech)</h2>
+    <ul>
+      <li><strong>Mecanismo do Sistema:</strong> o aplicativo utiliza o mecanismo de Conversão de Texto em Voz (Text-to-Speech — TTS) instalado e configurado no dispositivo Android para ler em voz alta mensagens, confirmações e avisos.</li>
+      <li><strong>Configurações e Vozes:</strong> voz, tom e velocidade são ajustados com base nos recursos disponibilizados pelo mecanismo TTS do aparelho e podem ser selecionados pelo usuário no sistema ou no próprio Me Avise.</li>
+      <li><strong>Processamento e Conexão de Rede:</strong> o Me Avise não possui a permissão <code>android.permission.INTERNET</code> nem implementa comunicação de rede própria. Contudo, dependendo do mecanismo TTS e da voz disponibilizada/selecionada, uma voz fornecida pelo sistema ou fabricante pode exigir conexão de rede ou processamento pelo respectivo provedor.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. Retenção de Dados e Backup</h2>
+    <p>Os dados salvos permanecem armazenados localmente no dispositivo até que:</p>
+    <ol>
+      <li>o usuário os exclua ou conclua manualmente dentro da interface do aplicativo;</li>
+      <li>o usuário limpe os dados do aplicativo nas configurações do Android; ou</li>
+      <li>o aplicativo seja desinstalado.</li>
+    </ol>
+    <p><strong>Backup Desativado:</strong> o aplicativo define <code>android:allowBackup="false"</code>, desativando o backup automático padrão dos dados locais do aplicativo.</p>
+  </section>
+
+  <section>
+    <h2>6. Compartilhamento e Serviços do Sistema</h2>
+    <p>O Me Avise não utiliza servidores próprios, redes de publicidade, ferramentas de analytics ou rastreadores e não comercializa informações dos usuários.</p>
+    <p>Eventuais comunicações externas no ecossistema do dispositivo podem decorrer do uso de serviços de voz fornecidos pelo Android ou pelo fabricante:</p>
+    <ol>
+      <li><strong>Reconhecimento de Fala (SpeechRecognizer):</strong> se o reconhecimento on-device não estiver disponível e o usuário consentir, o serviço do sistema/fabricante pode processar o áudio estritamente necessário à conversão de fala em texto, conforme sua própria política de privacidade.</li>
+      <li><strong>Síntese de Voz (Text-to-Speech):</strong> dependendo do mecanismo TTS e da voz escolhida, uma voz fornecida pelo sistema/fabricante pode requerer conexão de rede ou processamento pelo respectivo provedor.</li>
+    </ol>
+    <p>O Me Avise não intercepta, não armazena e não possui acesso aos servidores ou ao tráfego desses provedores de serviços do sistema.</p>
+  </section>
+
+  <section>
+    <h2>7. Contato para Privacidade e Suporte</h2>
+    <p>Para dúvidas, comentários ou solicitações relacionadas a esta Política de Privacidade ou ao aplicativo Me Avise:</p>
+    <p><strong>E-mail:</strong> <a href="mailto:meavise.app@gmail.com">meavise.app@gmail.com</a></p>
+  </section>
+
+  <p class="muted">Esta política reflete as práticas técnicas e arquiteturais implementadas na versão de distribuição do Me Avise.</p>
+</main>
+</body>
+</html>
