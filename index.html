@@ -49,73 +49,137 @@
   <h1>Política de Privacidade — Me Avise</h1>
   <p class="muted"><strong>Última atualização:</strong> 15 de setembro de 2026</p>
 
-  <p>Esta Política de Privacidade descreve de forma clara, transparente e objetiva como o aplicativo <strong>Me Avise</strong> trata as informações e os dados em seu dispositivo.</p>
+  <p>Esta Política de Privacidade descreve de forma clara, transparente e objetiva como o aplicativo <strong>Me Avise</strong> (organizador pessoal de lembretes, rotinas e compromissos) trata as informações e os dados em seu dispositivo.</p>
 
   <section>
-    <h2>1. Princípio Fundamental: Operação Local e Sem Internet</h2>
+    <h2>1. Funcionamento Local dos Dados Pessoais</h2>
+    <p>O <strong>Me Avise</strong> foi projetado para que a gestão de suas atividades cotidianas ocorra com privacidade e autonomia diretamente no seu aparelho:</p>
     <ul>
-      <li><strong>Sem Permissão de Internet:</strong> o aplicativo não solicita, não declara e não possui a permissão <code>android.permission.INTERNET</code> em seu manifesto. O Me Avise não implementa comunicações de rede próprias.</li>
-      <li><strong>Armazenamento Local:</strong> todos os lembretes, rotinas, compromissos e preferências de configuração do usuário são gravados e processados localmente no próprio aparelho.</li>
-      <li><strong>Sem Servidores Próprios:</strong> nenhum dado cadastrado é enviado para servidores próprios ou de terceiros sob controle da desenvolvedora.</li>
+      <li><strong>Armazenamento Local:</strong> todos os lembretes, rotinas, compromissos, registros de execução e preferências de configuração são gravados e processados exclusivamente de forma local, no banco de dados SQLite/Room do próprio dispositivo.</li>
+      <li><strong>Ausência de Servidores Próprios:</strong> o Me Avise não possui servidores próprios nem banco de dados em nuvem para armazenar, coletar ou sincronizar as informações criadas pelo usuário.</li>
+      <li><strong>Finalidade da Conectividade (Internet):</strong> o aplicativo declara e utiliza as permissões <code>android.permission.INTERNET</code> e <code>android.permission.ACCESS_NETWORK_STATE</code> para o funcionamento dos serviços de publicidade e privacidade do Google (Google AdMob, Google Mobile Ads SDK e Google UMP). O Me Avise não implementa comunicação de rede proprietária para enviar lembretes, rotinas ou compromissos. Os serviços de reconhecimento de voz e TTS fornecidos pelo Android ou fabricante podem, dependendo do provedor e configuração, utilizar conectividade própria do serviço da plataforma.</li>
     </ul>
   </section>
 
   <section>
-    <h2>2. Ausência de Publicidade, Rastreamento e Contas</h2>
+    <h2>2. Publicidade — Google AdMob</h2>
+    <p>Para viabilizar a distribuição gratuita e a sustentabilidade do projeto, o <strong>Me Avise</strong> exibe anúncios fornecidos pelo <strong>Google AdMob</strong>, utilizando o Google Mobile Ads SDK (GMA Next-Gen):</p>
     <ul>
-      <li><strong>Sem Anúncios:</strong> o aplicativo não exibe publicidade comercial e não integra SDKs de redes de anúncios.</li>
-      <li><strong>Sem Analytics ou Telemetria:</strong> o aplicativo não utiliza ferramentas de análise de uso, telemetria, crash reporting externo ou rastreamento de comportamento.</li>
-      <li><strong>Sem Rastreamento Entre Aplicativos:</strong> nenhum mecanismo de perfilamento ou identificador de publicidade é coletado ou monitorado.</li>
-      <li><strong>Sem Contas de Usuário:</strong> o aplicativo não exige criação de conta, login ou senha. O usuário pode registrar localmente informações de sua preferência no próprio aparelho.</li>
+      <li><strong>Formatos e Exibição:</strong> o aplicativo exibe um banner de publicidade na parte inferior da tela principal e pode exibir anúncios intersticiais em transições naturais de navegação no aplicativo. O formato e a frequência de exibição podem variar de acordo com critérios operacionais e limites de intervalo estabelecidos pelo aplicativo.</li>
+      <li><strong>Personalização de Anúncios:</strong> os anúncios veiculados podem ser personalizados ou não personalizados. A personalização depende de consentimento prévio do usuário (quando aplicável ou exigido), das configurações de privacidade do dispositivo, da localização geográfica e das políticas e tecnologias do Google. O Me Avise não afirma que os anúncios sejam sempre personalizados.</li>
     </ul>
   </section>
 
   <section>
-    <h2>3. Uso do Microfone e Reconhecimento de Voz</h2>
-    <p>O aplicativo oferece criação de itens por comando de voz.</p>
+    <h2>3. Dados Processados pelo SDK de Anúncios</h2>
+    <p>O Google Mobile Ads SDK pode coletar e processar determinados dados técnicos do dispositivo e de uso, conforme detalhado na documentação oficial e na política de privacidade do Google, incluindo, conforme aplicável:</p>
     <ul>
-      <li><strong>Uso Exclusivo sob Demanda:</strong> a permissão <code>android.permission.RECORD_AUDIO</code> é utilizada somente quando o usuário toca explicitamente no botão de microfone. O aplicativo não realiza escuta passiva em segundo plano.</li>
-      <li><strong>Prioridade para Reconhecimento no Dispositivo:</strong> sempre que suportado pelo dispositivo Android, o aplicativo prioriza o reconhecimento local no próprio aparelho.</li>
-      <li><strong>Consentimento para Serviço de Reconhecimento do Sistema:</strong> quando o reconhecimento no dispositivo não estiver disponível, o aplicativo somente poderá utilizar o mecanismo padrão de reconhecimento de voz do sistema após consentimento prévio e explícito do usuário.</li>
-      <li><strong>Processamento pelo Provedor do Sistema:</strong> caso o usuário consinta, o áudio capturado poderá ser processado pelo provedor do serviço de voz do Android ou pelo fabricante do aparelho, conforme a política de privacidade desse provedor. O Me Avise não cria nem armazena arquivos de áudio e não possui acesso aos servidores do provedor.</li>
+      <li><strong>Endereço IP:</strong> utilizado inclusive para estimar a localização aproximada (nível de cidade ou região) e garantir a entrega adequada dos serviços;</li>
+      <li><strong>Interações com o Aplicativo e com Anúncios:</strong> informações sobre anúncios visualizados, cliques, impressões e interações gerais com a publicidade;</li>
+      <li><strong>Informações de Diagnóstico e Desempenho:</strong> registros de erros técnicos, tempo de resposta e métricas de estabilidade do SDK de anúncios;</li>
+      <li><strong>Identificadores do Dispositivo e de Publicidade:</strong> Advertising ID (ID de publicidade / <code>AD_ID</code>) quando disponibilizado pelo sistema e permitido pelo usuário, App Set ID ou identificadores técnicos equivalentes gerados pelo SDK.</li>
+    </ul>
+    <p>O Google utiliza essas informações para seleção, veiculação e exibição de anúncios; medição e relatórios estatísticos (<em>analytics</em>) estritamente relacionados à eficácia da publicidade; prevenção a fraudes, detecção de tráfego inválido e segurança dos serviços; e cumprimento de requisitos legais e manutenção da plataforma.</p>
+    <p>A desenvolvedora não tem acesso direto ao conteúdo bruto desses dados individuais tal como coletados pelo SDK. O AdMob pode fornecer à desenvolvedora relatórios e métricas agregadas de publicidade e desempenho por meio de suas ferramentas. A desenvolvedora não vende dados pessoais e não comercializa informações a terceiros.</p>
+  </section>
+
+  <section>
+    <h2>4. Proteção do Conteúdo do Usuário</h2>
+    <p>A arquitetura do <strong>Me Avise</strong> não envia intencionalmente ao Google AdMob ou a outras redes de publicidade:</p>
+    <ul>
+      <li>o texto, título, descrição ou datas de seus lembretes;</li>
+      <li>os nomes de suas rotinas ou horários programados;</li>
+      <li>os títulos ou detalhes de seus compromissos;</li>
+      <li>o conteúdo digitado ou falado no fluxo de conversa do assistente;</li>
+      <li>gravações ou dados de voz capturados pelo microfone;</li>
+      <li>o conteúdo armazenado nas tabelas do banco de dados local (<code>Room</code>);</li>
+      <li>suas preferências pessoais de organização.</li>
+    </ul>
+    <p>O aplicativo não realiza segmentação customizada (<em>custom targeting</em>) de anúncios baseada nas informações ou atividades registradas em seus lembretes e rotinas.</p>
+  </section>
+
+  <section>
+    <h2>5. Consentimento e Privacidade (Google UMP)</h2>
+    <p>O aplicativo integra a biblioteca <strong>Google User Messaging Platform (UMP)</strong> para gerenciamento de privacidade e consentimento:</p>
+    <ul>
+      <li><strong>Obtenção de Consentimento:</strong> o UMP é utilizado para verificar a necessidade de consentimento e apresentar o formulário oficial de opções de privacidade quando exigido ou aplicável segundo a configuração técnica, localização do usuário e regras dos serviços do Google (por exemplo, sob regulamentações como o GDPR na União Europeia).</li>
+      <li><strong>Gerenciamento de Preferências:</strong> quando disponibilizado pela plataforma do Google, o usuário pode revisar ou alterar suas escolhas de privacidade relativas ao uso de dados para anúncios. O aplicativo não garante a exibição do formulário para todos os usuários em todas as regiões, aplicando-o conforme as regras da plataforma.</li>
     </ul>
   </section>
 
   <section>
-    <h2>4. Síntese de Voz (Text-to-Speech)</h2>
+    <h2>6. Microfone e Reconhecimento de Fala</h2>
+    <p>O aplicativo oferece a conveniência de criação de itens por comando de voz. O tratamento do áudio segue critérios estritos:</p>
     <ul>
-      <li><strong>Mecanismo do Sistema:</strong> o aplicativo utiliza o mecanismo de Conversão de Texto em Voz (Text-to-Speech — TTS) instalado e configurado no dispositivo Android para ler em voz alta mensagens, confirmações e avisos.</li>
-      <li><strong>Configurações e Vozes:</strong> voz, tom e velocidade são ajustados com base nos recursos disponibilizados pelo mecanismo TTS do aparelho e podem ser selecionados pelo usuário no sistema ou no próprio Me Avise.</li>
-      <li><strong>Processamento e Conexão de Rede:</strong> o Me Avise não possui a permissão <code>android.permission.INTERNET</code> nem implementa comunicação de rede própria. Contudo, dependendo do mecanismo TTS e da voz disponibilizada/selecionada, uma voz fornecida pelo sistema ou fabricante pode exigir conexão de rede ou processamento pelo respectivo provedor.</li>
+      <li><strong>Uso Exclusivo sob Demanda:</strong> a permissão de gravação de áudio (<code>android.permission.RECORD_AUDIO</code>) é utilizada unicamente no momento em que o usuário toca explicitamente no botão de microfone na tela para ditar uma instrução. O aplicativo <strong>não realiza escuta passiva</strong> em segundo plano.</li>
+      <li><strong>Prioridade On-Device:</strong> sempre que suportado pelo dispositivo Android (Android 12+), o aplicativo dá prioridade ao reconhecimento integrado no próprio aparelho (<code>SpeechRecognizer.createOnDeviceSpeechRecognizer</code>), processando o áudio localmente sem tráfego de dados por rede.</li>
+      <li><strong>Consentimento para Serviço do Sistema:</strong> quando o reconhecimento no dispositivo não estiver disponível no aparelho, o aplicativo só aciona o serviço de reconhecimento padrão do sistema operacional após exibição e consentimento prévio e explícito do usuário.</li>
+      <li><strong>Processamento pelo Provedor do Sistema:</strong> caso o usuário consinta na utilização do serviço do sistema, o áudio capturado é processado pelo provedor configurado no Android (como os Serviços de Voz do Google ou do fabricante do aparelho), segundo as políticas de privacidade do respectivo provedor. O Me Avise não cria nem armazena arquivos de áudio, não implementa comunicação própria com esses servidores e não controla o tratamento realizado pelos provedores desses serviços do sistema. Os serviços de reconhecimento de voz fornecidos pelo Android ou fabricante podem, dependendo do provedor e configuração, utilizar conectividade própria do serviço da plataforma.</li>
     </ul>
   </section>
 
   <section>
-    <h2>5. Retenção de Dados e Backup</h2>
-    <p>Os dados salvos permanecem armazenados localmente no dispositivo até que:</p>
+    <h2>7. Síntese de Voz (Text-to-Speech — TTS)</h2>
+    <ul>
+      <li><strong>Mecanismo do Sistema:</strong> o aplicativo aciona o motor de Conversão de Texto em Voz (Text-to-Speech — TTS) nativo configurado no dispositivo Android para ler em voz alta mensagens, respostas e avisos de lembretes.</li>
+      <li><strong>Configurações:</strong> as opções de entonação (pitch), velocidade de fala e seleção de voz respeitam os recursos expostos pelo motor TTS da plataforma e as preferências definidas pelo usuário.</li>
+      <li><strong>Conexão e Processamento:</strong> o Me Avise não implementa comunicação própria com servidores de voz. Os serviços de TTS fornecidos pelo Android ou fabricante podem, dependendo do provedor e configuração, utilizar conectividade própria do serviço da plataforma. O Me Avise não implementa comunicação própria com esses servidores e não controla o tratamento realizado pelos provedores desses serviços do sistema.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>8. Analytics e Telemetria</h2>
+    <ul>
+      <li><strong>Ausência de Plataforma Própria de Analytics:</strong> o Me Avise não integra Firebase Analytics, Firebase Crashlytics, Mixpanel ou qualquer plataforma proprietária de telemetria ou rastreamento de comportamento do usuário.</li>
+      <li><strong>Métricas do SDK de Anúncios:</strong> conforme detalhado na Seção 3, o Google Mobile Ads SDK pode processar dados técnicos para medição, estatísticas (<em>analytics</em>) estritamente relacionadas ao desempenho da publicidade, diagnósticos e prevenção a fraude.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>9. Retenção de Dados e Backup</h2>
+    <ul>
+      <li><strong>Permanência dos Dados do Organizador:</strong> os dados do organizador pessoal permanecem armazenados localmente no dispositivo até que o usuário os exclua ou conclua manualmente na interface do app, limpe os dados/cache do aplicativo nas configurações do sistema Android ou desinstale o aplicativo.</li>
+      <li><strong>Backup Desativado:</strong> o aplicativo define <code>android:allowBackup="false"</code> em sua configuração no manifesto, evitando que o banco de dados local seja copiado para serviços de backup em nuvem do sistema operacional.</li>
+      <li><strong>Dados Tratados por Terceiros:</strong> as regras de retenção de dados processados pelos serviços do Google (AdMob/UMP) e pelos provedores de voz do sistema seguem as políticas e controles de privacidade dos respectivos fornecedores.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>10. Serviços de Terceiros</h2>
+    <p>O aplicativo interage com os seguintes serviços externos:</p>
     <ol>
-      <li>o usuário os exclua ou conclua manualmente dentro da interface do aplicativo;</li>
-      <li>o usuário limpe os dados do aplicativo nas configurações do Android; ou</li>
-      <li>o aplicativo seja desinstalado.</li>
+      <li><strong>Google AdMob / Google Mobile Ads SDK:</strong> veiculação de anúncios e métricas associadas.</li>
+      <li><strong>Google User Messaging Platform (UMP):</strong> gerenciamento de consentimento de privacidade.</li>
+      <li><strong>Serviços de Reconhecimento e Síntese de Voz (Android / Fabricante):</strong> acionados através das APIs nativas do sistema operacional quando utilizados pelo usuário.</li>
     </ol>
-    <p><strong>Backup Desativado:</strong> o aplicativo define <code>android:allowBackup="false"</code>, desativando o backup automático padrão dos dados locais do aplicativo.</p>
+    <p>O tratamento de dados realizado por esses terceiros é regido por suas próprias políticas de privacidade e termos de uso (notadamente a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidade do Google</a>).</p>
   </section>
 
   <section>
-    <h2>6. Compartilhamento e Serviços do Sistema</h2>
-    <p>O Me Avise não utiliza servidores próprios, redes de publicidade, ferramentas de analytics ou rastreadores e não comercializa informações dos usuários.</p>
-    <p>Eventuais comunicações externas no ecossistema do dispositivo podem decorrer do uso de serviços de voz fornecidos pelo Android ou pelo fabricante:</p>
-    <ol>
-      <li><strong>Reconhecimento de Fala (SpeechRecognizer):</strong> se o reconhecimento on-device não estiver disponível e o usuário consentir, o serviço do sistema/fabricante pode processar o áudio estritamente necessário à conversão de fala em texto, conforme sua própria política de privacidade.</li>
-      <li><strong>Síntese de Voz (Text-to-Speech):</strong> dependendo do mecanismo TTS e da voz escolhida, uma voz fornecida pelo sistema/fabricante pode requerer conexão de rede ou processamento pelo respectivo provedor.</li>
-    </ol>
-    <p>O Me Avise não intercepta, não armazena e não possui acesso aos servidores ou ao tráfego desses provedores de serviços do sistema.</p>
+    <h2>11. Permissões do Aplicativo</h2>
+    <p>O aplicativo declara e utiliza as seguintes permissões no manifesto:</p>
+    <ul>
+      <li><code>android.permission.INTERNET</code>: permite comunicação de rede utilizada pelo Google Mobile Ads SDK (AdMob e UMP) para carregamento de anúncios e gestão de consentimento;</li>
+      <li><code>android.permission.ACCESS_NETWORK_STATE</code>: permite ao SDK de anúncios do Google verificar o estado da conexão de rede;</li>
+      <li><code>android.permission.RECORD_AUDIO</code>: gravação de áudio estritamente sob demanda para comando de voz;</li>
+      <li><code>android.permission.POST_NOTIFICATIONS</code>: exibição de notificações de lembretes e rotinas;</li>
+      <li><code>android.permission.SCHEDULE_EXACT_ALARM</code>: agendamento de alarmes no minuto exato via <code>AlarmManager</code>;</li>
+      <li><code>android.permission.RECEIVE_BOOT_COMPLETED</code>: restauração dos alarmes após reinicialização do dispositivo;</li>
+      <li><code>android.permission.FOREGROUND_SERVICE</code> e <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>: execução de avisos sonoros de alarmes em primeiro plano;</li>
+      <li><code>android.permission.WAKE_LOCK</code>: mantém a CPU ativa durante o breve disparo do alarme sonoro.</li>
+    </ul>
+    <p>Permissões incluídas automaticamente pelas bibliotecas do Google Mobile Ads SDK no manifesto final compilado:</p>
+    <ul>
+      <li><code>com.google.android.gms.permission.AD_ID</code>: identificador de publicidade utilizado pelo SDK conforme permissões do usuário no Android;</li>
+      <li><code>android.permission.READ_BASIC_PHONE_STATE</code>: compatibilidade operacional do SDK de anúncios em versões específicas do sistema.</li>
+    </ul>
   </section>
 
   <section>
-    <h2>7. Contato para Privacidade e Suporte</h2>
-    <p>Para dúvidas, comentários ou solicitações relacionadas a esta Política de Privacidade ou ao aplicativo Me Avise:</p>
+    <h2>12. Contato para Privacidade e Suporte</h2>
+    <p>Para qualquer dúvida, comentário ou solicitação referente a esta Política de Privacidade ou às práticas de dados do aplicativo <strong>Me Avise</strong>, entre em contato:</p>
     <p><strong>E-mail:</strong> <a href="mailto:meavise.app@gmail.com">meavise.app@gmail.com</a></p>
+    <p><strong>Página pública da política:</strong> <a href="https://lanajuliana1987.github.io/me-avise-privacy/">https://lanajuliana1987.github.io/me-avise-privacy/</a></p>
   </section>
 
   <p class="muted">Esta política reflete as práticas técnicas e arquiteturais implementadas na versão de distribuição do Me Avise.</p>
