@@ -47,7 +47,7 @@
 <body>
 <main>
   <h1>Política de Privacidade — Me Avise</h1>
-  <p class="muted"><strong>Última atualização:</strong> 17 de setembro de 2026</p>
+  <p class="muted"><strong>Última atualização:</strong> 4 de outubro de 2026</p>
 
   <p>Esta Política de Privacidade descreve de forma clara, transparente e objetiva como o aplicativo <strong>Me Avise</strong> (organizador pessoal de lembretes, rotinas e compromissos) trata as informações e os dados em seu dispositivo.</p>
 
@@ -57,7 +57,7 @@
     <ul>
       <li><strong>Armazenamento Local:</strong> todos os lembretes, rotinas, compromissos, status dos itens e preferências de configuração são gravados e processados exclusivamente de forma local, no banco de dados SQLite/Room do próprio dispositivo.</li>
       <li><strong>Ausência de Servidores Próprios:</strong> o Me Avise não possui servidores próprios nem banco de dados em nuvem para armazenar, coletar ou sincronizar as informações criadas pelo usuário.</li>
-      <li><strong>Finalidade da Conectividade (Internet):</strong> o aplicativo declara e utiliza as permissões <code>android.permission.INTERNET</code> e <code>android.permission.ACCESS_NETWORK_STATE</code> para o funcionamento dos serviços de publicidade e privacidade do Google (Google AdMob, Google Mobile Ads SDK e Google UMP). O Me Avise não implementa comunicação de rede proprietária para enviar lembretes, rotinas ou compromissos. Os serviços de reconhecimento de voz e TTS fornecidos pelo Android ou fabricante podem, dependendo do provedor e configuração, utilizar conectividade própria do serviço da plataforma.</li>
+      <li><strong>Finalidade da Conectividade (Internet):</strong> o aplicativo declara e utiliza as permissões <code>android.permission.INTERNET</code> e <code>android.permission.ACCESS_NETWORK_STATE</code> para o funcionamento dos serviços de publicidade e privacidade do Google (Google AdMob, Google Mobile Ads SDK e Google UMP). O Me Avise não implementa comunicação de rede proprietária para enviar lembretes, rotinas ou compromissos. O reconhecimento de voz prioriza o próprio aparelho (on-device); quando indisponível, somente após consentimento explícito pode recorrer ao serviço configurado no Android, que pode usar internet conforme o provedor. O TTS utilizado pelo Me Avise é local/offline, sem fallback online.</li>
     </ul>
   </section>
 
@@ -121,10 +121,10 @@
   <section>
     <h2>7. Síntese de Voz (Text-to-Speech — TTS)</h2>
     <ul>
-      <li><strong>Mecanismo do Sistema:</strong> o aplicativo aciona o motor de Conversão de Texto em Voz (Text-to-Speech — TTS) nativo configurado no dispositivo Android para ler em voz alta mensagens, respostas e avisos de lembretes.</li>
+      <li><strong>Mecanismo do Sistema:</strong> o aplicativo utiliza o mecanismo de conversão de texto em voz (TextToSpeech) do Android para ler em voz alta mensagens, respostas e avisos de lembretes.</li>
       <li><strong>Configurações:</strong> as opções de entonação (pitch), velocidade de fala e seleção de voz respeitam os recursos expostos pelo motor TTS da plataforma e as preferências definidas pelo usuário.</li>
       <li><strong>Fala com o Dispositivo Bloqueado:</strong> quando a opção de voz da assistente estiver habilitada, avisos podem ser falados em voz alta mesmo com o dispositivo bloqueado e, por isso, podem ser ouvidos por pessoas próximas. Essa opção pode ser desativada nas configurações do aplicativo.</li>
-      <li><strong>Conexão e Processamento:</strong> o Me Avise não implementa comunicação própria com servidores de voz. Os serviços de TTS fornecidos pelo Android ou fabricante podem, dependendo do provedor e configuração, utilizar conectividade própria do serviço da plataforma. O Me Avise não implementa comunicação própria com esses servidores e não controla o tratamento realizado pelos provedores desses serviços do sistema.</li>
+      <li><strong>Conexão e Processamento:</strong> o Me Avise aceita apenas vozes locais/offline instaladas. Vozes dependentes de rede, não instaladas ou genéricas que possam delegar a escolha a uma voz de servidor não são usadas. Não há fallback TTS online; sem voz local válida, o app não fala e permanece utilizável por texto.</li>
     </ul>
   </section>
 
@@ -151,7 +151,7 @@
     <ol>
       <li><strong>Google AdMob / Google Mobile Ads SDK:</strong> veiculação de anúncios e métricas associadas.</li>
       <li><strong>Google User Messaging Platform (UMP):</strong> gerenciamento de consentimento de privacidade.</li>
-      <li><strong>Serviços de Reconhecimento e Síntese de Voz (Android / Fabricante):</strong> acionados através das APIs nativas do sistema operacional quando utilizados pelo usuário.</li>
+      <li><strong>Serviços de Reconhecimento e Síntese de Voz (Android / Fabricante):</strong> fornecem as APIs nativas do sistema. O reconhecimento do sistema pode ser usado mediante consentimento explícito quando o modo on-device estiver indisponível e pode usar internet conforme o provedor. O TTS utilizado pelo Me Avise é restrito à execução com voz local/offline instalada, sem fallback online.</li>
     </ol>
     <p>O tratamento de dados realizado por esses terceiros é regido por suas próprias políticas de privacidade e termos de uso (notadamente a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidade do Google</a>).</p>
   </section>
